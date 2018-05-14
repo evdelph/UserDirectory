@@ -1,0 +1,62 @@
+body {
+    font-family: sans-serif;
+}
+#button1{
+    background-color:white;
+    color:black;
+    padding: 32px 16px;
+    border-radius: 8px;
+    margin: auto;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    font-size: medium;
+    border: 2px solid cornflowerblue;
+    width: 15%;
+    float: left;
+    margin-left: 32%;
+}
+
+#button2{
+    background-color:white;
+    color:black;
+    padding: 32px 16px;
+    border-radius: 8px;
+    margin: auto;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    font-size: medium;
+    border: 2px solid grey;
+    width: 15%;
+    float: right;
+    margin-right: 32%;
+}
+
+#button1:hover{
+    background-color: cornflowerblue;
+    color: white;
+}
+
+#button2:hover{
+    background-color:grey;
+    color: white;
+}
+form{
+    margin-left: 35%;
+    margin-right: 40%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+}
+p.instructions{
+    margin-left: 20%;
+    margin-right: 20%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    align-content: center;
+}
+h2.instructions{
+    margin-left: 5%;
+    margin-right: 20%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    align-content: center;
+}

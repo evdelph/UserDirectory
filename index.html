@@ -5,8 +5,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>User Directory</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    <h1>User Directory</h1>
+    <h1 id="title"align="center">Xtern Bootcamp Day 1</h1>
+    <br>
+    <h2 class="instructions"align="center">Part 1: Change the Heading Using User Input</h2>
+    <p class='instructions'>Welcome! To give this page a new heading, please enter
+        the new title into the box below and click the button. To restore the page's original content,
+        click "Refresh."
+    </p>
+    <form>
+        <p class="heading">
+        New Heading:  <input type="text" name="newHeading"><br>
+        </p>
+    </form>
+    <button id="button1">Update Heading</button>
+    <button id="button2">Refresh Page</button>
+    <script src="index.js"></script>
 </body>
 </html>

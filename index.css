@@ -33,6 +33,50 @@ body {
     margin-right: 32%;
 }
 
+#button1_1{
+    background-color:white;
+    color:black;
+    padding: 32px 16px;
+    border-radius: 8px;
+    margin: auto;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    font-size: medium;
+    border: 2px solid grey;
+    width: 15%;
+    float: left;
+    margin-left: 32%;
+}
+#button1_2{
+    background-color:white;
+    color:black;
+    padding: 32px 16px;
+    border-radius: 8px;
+    margin: auto;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    font-size: medium;
+    border: 2px solid salmon;
+    width: 15%;
+    float: right;
+    margin-right: 32%;
+}
+#button1_1, #button1_2{
+    display:inline-block;
+}
+
+
+#button1_1:hover{
+    background-color: grey;
+    color: white;
+}
+#button1_2:hover{
+    background-color: salmon;
+    color: white;
+}
+
 #button1:hover{
     background-color: cornflowerblue;
     color: white;
@@ -55,8 +99,23 @@ p.instructions{
     align-content: center;
 }
 h2.instructions{
-    margin-left: 5%;
-    margin-right: 20%;
+    margin-left: 8%;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     align-content: center;
 }
+
+#first{
+    
+    margin-left: 34%;
+    margin-top: -5%;
+    position:absolute;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+#second{
+    margin-left: 55%;
+    margin-top: -5%;
+    float:right;
+    position:absolute;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+

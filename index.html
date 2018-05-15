@@ -1,48 +1,35 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>User Directory</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="index.css">
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>User Directory</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    <div id="header1">
-    <h1 id="title"align="center" color="white">Xtern Bootcamp Day 1</h1>
-    </div>
-    <br>
-    <h2 class="instructions">Part 1: Change the Heading Using User Input</h2>
-    <p class='instructions'>Welcome! To give this page a new heading, please enter
-        the new title into the box below and click the button. To restore the page's original content,
-        click "Refresh Page."
-    </p><br>
-    <form>
-        <p class="heading">
-        New Heading:  <input type="text" name="newHeading"><br>
-        </p>
-    </form>
-    <button id="button1">Update Heading</button>
-    <button id="button2">Refresh Page</button>
+  <h1>User Directory</h1>
 
-    <br><br><br><br><br><br><br>
-    <h2 class="instructions">Part 2: Change Multiple Headers</h2>
-    <p class='instructions'>Using the same form as above, change the smaller headings. Press the corresponding buttons, and click "Refresh Page"
-        to restore the page to its original settings.
-    </p><br><br><br>
+  <form id="userForm">
     <p>
-    <h3 id="first">Change me!</h3
-    ><button id="button1_1">Click me!</button>
+      <label for="userName">Name</label>
+      <input type="text" name="userName" autofocus>
     </p>
-   
     <p>
-    <h3 id="second" align=right>Change me!</h3>
-    <button id="button1_2">Click ME!</button>
+      <label for="age">Age</label>
+      <input type="number" name="age">
     </p>
-    <br><br><br>
-   
+    <p>
+      <label for="favoriteColor">Favorite color</label>
+      <input type="color" name="favoriteColor">
+    </p>
 
+    <button type="submit">Go</button>
+    <button type="reset">Clear</button>
+  </form>
 
-    <script src="index.js"></script>
+  <div id="users"></div>
+
+  <script src="index.js"></script>
 </body>
 </html>

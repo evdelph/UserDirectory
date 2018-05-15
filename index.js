@@ -1,44 +1,67 @@
-//Set variable for user input
+const form = document.querySelector('form#userForm')
+const userName = form.userName.value
+const age = form.age.value
+const favoriteColor = form.favoriteColor.value
+const users = document.querySelector('#users')
+const handleSubmit = function(ev) {
+  ev.preventDefault()
+  const form = ev.target
+//   const userName = form.userName.value
+//   const age = form.age.value
+//   const favoriteColor = form.favoriteColor.value
+//   const users = document.querySelector('#users')
 
-const button = document.querySelector('#button1')
+  //const list = document.createElement('ul')
 
-// Function to change text
-function changeHeading(){
-let myValue = document.querySelector('input').value
-let titleChange = document.querySelector('#title')
-titleChange.textContent = myValue
+//   const nameItem = document.createElement('li')
+//   nameItem.textContent = `Name: ${userName}`
+
+//   const ageItem = document.createElement('li')
+//   ageItem.textContent = `Age: ${age}`
+
+//   const colorItem = document.createElement('li')
+//   colorItem.textContent = 'Favorite Color: '
+
+    
+  //colorItem.appendChild(renderColor())
+
+//   list.appendChild(nameItem)
+//   list.appendChild(ageItem)
+//   list.appendChild(colorItem)
+
+  users.appendChild(renderList())
+
+  form.reset()
+  form.userName.focus()
 }
 
-// Change text
-button.addEventListener('click',changeHeading)
-
-// Make new variable for refresh button
-const button2 = document.querySelector("#button2")
-
-// Refresh function
-function refreshPage(){
-    location.reload()
+function renderColor(){
+  const colorDiv = document.createElement('div')
+  colorDiv.style.backgroundColor = favoriteColor
+  colorDiv.style.width = '6rem'
+  colorDiv.style.height = '3rem'
+  return colorDiv
 }
 
-// Click event
-button2.addEventListener('click',refreshPage)
+function renderListItem(item){
+    const listItem = document.createElement('li')
+    listItem.textContent = item
+    return listItem
+}
 
-// Part 2 Code
+function renderList(){
+    const list = document.createElement('ul')
+    const nameItem = renderListItem(`Name: ${userName}`)
+    const ageItem = renderListItem(`Age: ${age}`)
+    const colorItem = renderListItem('Favorite Color: ')
+    colorItem.appendChild(renderColor())
 
-// Button 1_1
-const button1_1 = document.querySelector('#button1_1')
-function changeFirstSubHeading(){
-    let myValue = document.querySelector('input').value
-    let subtitleChange = document.querySelector('#first')
-    subtitleChange.textContent = myValue
-    }
-button1_1.addEventListener('click',changeFirstSubHeading)
+    list.appendChild(nameItem)
+    list.appendChild(ageItem)
+    list.appendChild(colorItem)
 
-// Button 1_2
-const button1_2 = document.querySelector('#button1_2')
-function changeSecondSubHeading(){
-    let myValue = document.querySelector('input').value
-    let subtitleChange = document.querySelector('#second')
-    subtitleChange.textContent = myValue
-    }
-button1_2.addEventListener('click',changeSecondSubHeading)
+    return list
+  
+}
+
+form.addEventListener('submit', handleSubmit)

@@ -1,6 +1,7 @@
 
 const form = document.querySelector('form#userForm')
 const users = document.querySelector('#users')
+const button2 = document.querySelector("#button2")
 
 const handleSubmit = function(ev) {
   ev.preventDefault()
@@ -48,4 +49,9 @@ function renderList(){
   
 }
 
+function refreshPage(){
+    location.reload()
+}
+
 form.addEventListener('submit', handleSubmit)
+button2.addEventListener('click',refreshPage)

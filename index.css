@@ -8,6 +8,7 @@
   }
 body {
     font-family: sans-serif;
+
   }
 
 h1{
@@ -92,3 +93,10 @@ form{
     margin-left: 20%;
 }
 
+ul{
+    list-style-position: inside;
+    font-family:'Archivo Black', sans-serif;;
+    width: 10%;
+    margin-left: 20%;
+    float: center;
+}

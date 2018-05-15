@@ -31,7 +31,9 @@ function renderList(){
     userName = form.userName.value
     age = form.age.value
 
+    debugger
     const nameItem = renderListItem(`Name: ${userName}`)
+    debugger
     const ageItem = renderListItem(`Age: ${age}`)
     const colorItem = renderListItem('Favorite Color: ')
     colorItem.appendChild(renderColor())
@@ -39,6 +41,8 @@ function renderList(){
     list.appendChild(nameItem)
     list.appendChild(ageItem)
     list.appendChild(colorItem)
+
+    list
 
     return list
   

@@ -30,17 +30,24 @@ function renderColor(color){
 
 function renderListItem(label, value){
     const listItem = document.createElement('li')
-    listItem.textContent = `${label}: `
+    const term = document.createElement('dt')
+    term.textContent = label
+
+    const description = document.createElement('dd')
+
     try{
-        listItem.appendChild(value)
+        description.appendChild(value)
     } catch(e) {
-        listItem.textContent += value
+        description.textContent += value
     }
+
+    listItem.appendChild(term)
+    listItem.appendChild(description)
     return listItem
 }
 
 function renderList(data){
-    const list = document.createElement('ul')
+    const list = document.createElement('dl')
     userName = form.userName.value
     age = form.age.value
    

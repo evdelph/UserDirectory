@@ -6,8 +6,8 @@ const button2 = document.querySelector("#button2")
 const handleSubmit = function(ev) {
   ev.preventDefault()
   const form = ev.target
-  users.appendChild(renderList())
 
+  users.appendChild(renderList())
   form.reset()
   form.userName.focus()
 }
@@ -36,16 +36,20 @@ function renderList(){
     userName = form.userName.value
     age = form.age.value
 
-    const nameItem = renderListItem('Name' , userName)
-    const ageItem = renderListItem('Age', age)
     const favoriteColor = renderColor(form.favoriteColor.value)
     const colorItem = renderListItem('Favorite Color', favoriteColor)
+    const user = {
+        'Name': form.userName.value,
+        'Age': form.age.value,
+        'Favorite Color': renderColor(form.favoriteColor.value),
+    }
+  
+    Object.keys(user).map(function(label){
+      const item = renderListItem(label, user[label])
+      list.appendChild(item)
+    })
+  
     colorItem.appendChild(favoriteColor)
-
-    list.appendChild(nameItem)
-    list.appendChild(ageItem)
-    list.appendChild(colorItem)
-
     list
 
     return list

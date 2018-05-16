@@ -90,16 +90,15 @@ input{
 form{
     background-color: darkviolet;
     border-radius: 4px;
-    padding: 32px;
-    width: 60%;
-    height: 60%;
-    margin-left: 15%; 
+    padding: 48px 48px;
+    width: 45%;
+    height: 100%;
+    margin-left: 0%; 
 }
 
 #users{
     height: 60%;
     width: 65%;
-    margin-left: 15%;
     display: grid;
     grid-template-areas: "a a a a";
     grid-gap: 45px;
@@ -109,5 +108,17 @@ form{
     font-family: 'Archivo Black', sans-serif;
     font-size: 14px;   
 }
+
+dl li {
+    list-style: none;
+    margin-top: 1rem;
+}
+
+main{
+    display: flex;
+    justify-content: space-around;
+
+}
+
 
 

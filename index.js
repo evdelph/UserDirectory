@@ -7,7 +7,15 @@ const handleSubmit = function(ev) {
   ev.preventDefault()
   const form = ev.target
 
-  users.appendChild(renderList())
+  const favoriteColor = renderColor(form.favoriteColor.value)
+  const colorItem = renderListItem('Favorite Color', favoriteColor)
+  const user = {
+      'Name': form.userName.value,
+      'Age': form.age.value,
+      'Favorite Color': renderColor(form.favoriteColor.value),
+  }
+
+  users.appendChild(renderList(user))
   form.reset()
   form.userName.focus()
 }
@@ -31,27 +39,16 @@ function renderListItem(label, value){
     return listItem
 }
 
-function renderList(){
+function renderList(data){
     const list = document.createElement('ul')
     userName = form.userName.value
     age = form.age.value
-
-    const favoriteColor = renderColor(form.favoriteColor.value)
-    const colorItem = renderListItem('Favorite Color', favoriteColor)
-    const user = {
-        'Name': form.userName.value,
-        'Age': form.age.value,
-        'Favorite Color': renderColor(form.favoriteColor.value),
-    }
-  
-    Object.keys(user).map(function(label){
-      const item = renderListItem(label, user[label])
+   
+    Object.keys(data).map(function(label){
+      const item = renderListItem(label, data[label])
       list.appendChild(item)
     })
   
-    colorItem.appendChild(favoriteColor)
-    list
-
     return list
   
 }

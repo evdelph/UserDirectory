@@ -12,10 +12,10 @@ const handleSubmit = function(ev) {
   form.userName.focus()
 }
 
-function renderColor(){
+function renderColor(color){
   const colorDiv = document.createElement('div')
   const favoriteColor = form.favoriteColor.value
-  colorDiv.style.backgroundColor = favoriteColor
+  colorDiv.style.backgroundColor = color
   colorDiv.style.width = '6rem'
   colorDiv.style.height = '3rem'
   return colorDiv
@@ -32,12 +32,11 @@ function renderList(){
     userName = form.userName.value
     age = form.age.value
 
-    debugger
     const nameItem = renderListItem(`Name: ${userName}`)
-    debugger
     const ageItem = renderListItem(`Age: ${age}`)
+    const favoriteColor = form.favoriteColor.value
     const colorItem = renderListItem('Favorite Color: ')
-    colorItem.appendChild(renderColor())
+    colorItem.appendChild(renderColor(favoriteColor))
 
     list.appendChild(nameItem)
     list.appendChild(ageItem)

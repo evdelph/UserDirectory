@@ -13,7 +13,7 @@ body {
 h1{
     font-family: 'Archivo Black', sans-serif;
     float: center;
-    margin-left: 30%;
+    margin-left: 27%;
     font-size: 60px;
 }
 
@@ -114,15 +114,21 @@ form{
     padding: 32px;
     width: 60%;
     height: 60%;
+    margin-left: 15%; 
+}
+
+#users{
+    height: 60%;
+    width: 65%;
     margin-left: 15%;
-
+    display: grid;
+    grid-template-areas: "a a a a";
+    grid-gap: 45px;
     
+    background-color: cornflowerblue;
+    border-radius: 4px;
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 10px;   
 }
 
-ul{
-    list-style-position: inside;
-    font-family:'Archivo Black', sans-serif;;
-    width: 10%;
-    margin-left: 40%;
-    float: center;
-}
+

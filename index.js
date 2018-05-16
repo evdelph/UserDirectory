@@ -22,7 +22,12 @@ function renderColor(color){
 
 function renderListItem(label, value){
     const listItem = document.createElement('li')
-    listItem.textContent = `${label}:`
+    listItem.textContent = `${label}: `
+    try{
+        listItem.appendChild(value)
+    } catch(e) {
+        listItem.textContent += value
+    }
     return listItem
 }
 
@@ -33,9 +38,9 @@ function renderList(){
 
     const nameItem = renderListItem('Name' , userName)
     const ageItem = renderListItem('Age', age)
-    const favoriteColor = form.favoriteColor.value
-    const colorItem = renderListItem('Favorite Color ')
-    colorItem.appendChild(renderColor(favoriteColor))
+    const favoriteColor = renderColor(form.favoriteColor.value)
+    const colorItem = renderListItem('Favorite Color', favoriteColor)
+    colorItem.appendChild(favoriteColor)
 
     list.appendChild(nameItem)
     list.appendChild(ageItem)

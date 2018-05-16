@@ -90,10 +90,10 @@ input{
 form{
     background-color: darkviolet;
     border-radius: 4px;
-    padding: 48px 48px;
-    width: 45%;
+    padding: 32px 32px;
+    width: 60%;
     height: 100%;
-    margin-left: 0%; 
+    margin-left:15%; 
 }
 
 #users{
@@ -107,6 +107,7 @@ form{
     border-radius: 4px;
     font-family: 'Archivo Black', sans-serif;
     font-size: 14px;   
+    margin-left: 15%;
 }
 
 dl li {
@@ -114,11 +115,7 @@ dl li {
     margin-top: 1rem;
 }
 
-main{
-    display: flex;
-    justify-content: space-around;
 
-}
 
 
 

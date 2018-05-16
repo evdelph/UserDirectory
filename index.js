@@ -14,16 +14,15 @@ const handleSubmit = function(ev) {
 
 function renderColor(color){
   const colorDiv = document.createElement('div')
-  const favoriteColor = form.favoriteColor.value
   colorDiv.style.backgroundColor = color
   colorDiv.style.width = '6rem'
   colorDiv.style.height = '3rem'
   return colorDiv
 }
 
-function renderListItem(item){
+function renderListItem(label, value){
     const listItem = document.createElement('li')
-    listItem.textContent = item
+    listItem.textContent = `${label}:`
     return listItem
 }
 
@@ -32,10 +31,10 @@ function renderList(){
     userName = form.userName.value
     age = form.age.value
 
-    const nameItem = renderListItem(`Name: ${userName}`)
-    const ageItem = renderListItem(`Age: ${age}`)
+    const nameItem = renderListItem('Name' , userName)
+    const ageItem = renderListItem('Age', age)
     const favoriteColor = form.favoriteColor.value
-    const colorItem = renderListItem('Favorite Color: ')
+    const colorItem = renderListItem('Favorite Color ')
     colorItem.appendChild(renderColor(favoriteColor))
 
     list.appendChild(nameItem)
